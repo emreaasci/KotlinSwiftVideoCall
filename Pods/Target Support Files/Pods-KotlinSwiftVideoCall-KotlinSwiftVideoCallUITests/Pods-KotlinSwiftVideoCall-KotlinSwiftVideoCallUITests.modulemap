@@ -1,0 +1,6 @@
+framework module Pods_KotlinSwiftVideoCall_KotlinSwiftVideoCallUITests {
+  umbrella header "Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

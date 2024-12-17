@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_KotlinSwiftVideoCall_KotlinSwiftVideoCallUITests : NSObject
+@end
+@implementation PodsDummy_Pods_KotlinSwiftVideoCall_KotlinSwiftVideoCallUITests
+@end

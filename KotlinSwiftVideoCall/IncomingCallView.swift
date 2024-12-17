@@ -1,3 +1,14 @@
+//
+//  IncomingCallView.swift
+//  KotlinSwiftVideoCall
+//
+//  Created by Emre Aşcı on 16.12.2024.
+//
+
+
+
+import SwiftUI
+
 // Yeni View: Gelen arama ekranı
 struct IncomingCallView: View {
     @ObservedObject var viewModel: CallViewModel

@@ -1,15 +1,25 @@
+//
+//  WebRTCManager.swift
+//  KotlinSwiftVideoCall
+//
+//  Created by Emre Aşcı on 16.12.2024.
+//
+
+
 import Foundation
 import WebRTC
+import CoreMedia
 
 class WebRTCManager: NSObject {
-    private var peerConnection: RTCPeerConnection?
+    public var peerConnection: RTCPeerConnection?
     private let factory: RTCPeerConnectionFactory
     private let rtcAudioSession = RTCAudioSession.sharedInstance()
     private let audioQueue = DispatchQueue(label: "audio")
     private let mediaConstrains = RTCMediaConstraints(mandatoryConstraints: nil,
                                                     optionalConstraints: nil)
+    
     private var videoCapturer: RTCCameraVideoCapturer?
-    private var localVideoTrack: RTCVideoTrack?
+    public private(set) var localVideoTrack: RTCVideoTrack?
     private var remoteVideoTrack: RTCVideoTrack?
     
     weak var delegate: WebRTCManagerDelegate?
@@ -55,6 +65,35 @@ class WebRTCManager: NSObject {
         }
     }
     
+    // WebRTCManager.swift içine eklenecek
+    func endCall() {
+        // Mevcut bağlantıyı kapat
+        peerConnection?.close()
+        peerConnection = nil
+        
+        // Video ve ses izlerini temizle
+        localVideoTrack?.isEnabled = false
+        localVideoTrack = nil
+        remoteVideoTrack?.isEnabled = false
+        remoteVideoTrack = nil
+        
+        // Video yakalayıcıyı durdur
+        videoCapturer?.stopCapture()
+        videoCapturer = nil
+        
+        // Ses oturumunu resetle
+        audioQueue.async { [weak self] in
+            guard let self = self else { return }
+            self.rtcAudioSession.lockForConfiguration()
+            do {
+                try self.rtcAudioSession.setActive(false)
+            } catch let error {
+                debugPrint("Error stopping audio session:", error)
+            }
+            self.rtcAudioSession.unlockForConfiguration()
+        }
+    }
+    
     private func setupLocalTracks() {
         let streamId = "local-stream"
         
@@ -73,7 +112,9 @@ class WebRTCManager: NSObject {
         
         guard let frontCamera = RTCCameraVideoCapturer.captureDevices().first(where: { $0.position == .front }),
             let format = RTCCameraVideoCapturer.supportedFormats(for: frontCamera).sorted(by: {
-                $0.imageHeight * $0.imageWidth < $1.imageHeight * $1.imageWidth
+                let dimensions1 = CMVideoFormatDescriptionGetDimensions($0.formatDescription)
+                let dimensions2 = CMVideoFormatDescriptionGetDimensions($1.formatDescription)
+                return dimensions1.width * dimensions1.height < dimensions2.width * dimensions2.height
             }).last,
             let fps = format.videoSupportedFrameRateRanges.first else {
             return
@@ -136,6 +177,61 @@ class WebRTCManager: NSObject {
             self.rtcAudioSession.unlockForConfiguration()
         }
     }
+    
+    
+    
+    func handleRemoteOffer(_ sessionDescription: RTCSessionDescription) {
+            print("Received offer:", sessionDescription.sdp)
+            peerConnection?.setRemoteDescription(sessionDescription) { [weak self] error in
+                if let error = error {
+                    print("Error setting remote description: \(error)")
+                    return
+                }
+                print("Remote description set successfully") // Debug
+                
+                // Create answer
+                let constraints = RTCMediaConstraints(
+                    mandatoryConstraints: ["OfferToReceiveVideo": "true", "OfferToReceiveAudio": "true"],
+                    optionalConstraints: nil
+                )
+                
+                self?.peerConnection?.answer(for: constraints) { [weak self] sdp, error in
+                    if let error = error {
+                        print("Error creating answer: \(error)")
+                        return
+                    }
+                    
+                    guard let sdp = sdp else { return }
+                    print("Created answer successfully") // Debug
+                    
+                    self?.peerConnection?.setLocalDescription(sdp) { error in
+                        if let error = error {
+                            print("Error setting local description: \(error)")
+                            return
+                        }
+                        print("Local description set successfully") // Debug
+                        self?.delegate?.webRTCManager(self!, didCreateAnswer: sdp)
+                    }
+                }
+            }
+        }
+
+    func handleRemoteAnswer(_ sessionDescription: RTCSessionDescription) {
+            print("Handling remote answer") // Debug
+            peerConnection?.setRemoteDescription(sessionDescription) { error in
+                if let error = error {
+                    print("Error setting remote answer: \(error)")
+                } else {
+                    print("Remote answer set successfully") // Debug
+                }
+            }
+        }
+
+        
+    func handleRemoteCandidate(_ iceCandidate: RTCIceCandidate) {
+            print("Adding ICE candidate:", iceCandidate.sdp)
+            peerConnection?.add(iceCandidate)
+        }
 }
 
 extension WebRTCManager: RTCPeerConnectionDelegate {
@@ -168,8 +264,14 @@ extension WebRTCManager: RTCPeerConnectionDelegate {
     }
     
     func peerConnection(_ peerConnection: RTCPeerConnection, didGenerate candidate: RTCIceCandidate) {
-        debugPrint("peerConnection did generate candidate")
-    }
+            let iceCandidate = IceCandidateModel(
+                sdpMid: candidate.sdpMid,
+                sdpMLineIndex: candidate.sdpMLineIndex,
+                sdpCandidate: candidate.sdp
+            )
+            
+            delegate?.webRTCManager(self, didGenerateIceCandidate: iceCandidate)
+        }
     
     func peerConnection(_ peerConnection: RTCPeerConnection, didRemove candidates: [RTCIceCandidate]) {
         debugPrint("peerConnection did remove candidate(s)")
@@ -178,4 +280,8 @@ extension WebRTCManager: RTCPeerConnectionDelegate {
     func peerConnection(_ peerConnection: RTCPeerConnection, didOpen dataChannel: RTCDataChannel) {
         debugPrint("peerConnection did open data channel")
     }
+    
+    
+    
+    
 }

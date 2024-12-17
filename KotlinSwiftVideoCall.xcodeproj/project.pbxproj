@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		40CD5EB4912C62D4E1EED766 /* Pods_KotlinSwiftVideoCallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC33EC977149F56E3934E4F1 /* Pods_KotlinSwiftVideoCallTests.framework */; };
+		921C16A6F9FE8E718844C037 /* Pods_KotlinSwiftVideoCall_KotlinSwiftVideoCallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484DC4CB5582CF6F69150A5B /* Pods_KotlinSwiftVideoCall_KotlinSwiftVideoCallUITests.framework */; };
+		DADD245252E6BEEE9B08076D /* Pods_KotlinSwiftVideoCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC6233459975CD3E5E0D69E /* Pods_KotlinSwiftVideoCall.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		27146FBB2D10123E0076ECE3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +33,15 @@
 		27146FAA2D10123C0076ECE3 /* KotlinSwiftVideoCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KotlinSwiftVideoCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27146FBA2D10123E0076ECE3 /* KotlinSwiftVideoCallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KotlinSwiftVideoCallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27146FC42D10123E0076ECE3 /* KotlinSwiftVideoCallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KotlinSwiftVideoCallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28115D8B4984570633DDEE1C /* Pods-KotlinSwiftVideoCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotlinSwiftVideoCall.release.xcconfig"; path = "Target Support Files/Pods-KotlinSwiftVideoCall/Pods-KotlinSwiftVideoCall.release.xcconfig"; sourceTree = "<group>"; };
+		484DC4CB5582CF6F69150A5B /* Pods_KotlinSwiftVideoCall_KotlinSwiftVideoCallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KotlinSwiftVideoCall_KotlinSwiftVideoCallUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AC6233459975CD3E5E0D69E /* Pods_KotlinSwiftVideoCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KotlinSwiftVideoCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		586252775AFE3A548B8DF3CA /* Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests.debug.xcconfig"; path = "Target Support Files/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		756D41144EACA8DA830BBF14 /* Pods-KotlinSwiftVideoCallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotlinSwiftVideoCallTests.release.xcconfig"; path = "Target Support Files/Pods-KotlinSwiftVideoCallTests/Pods-KotlinSwiftVideoCallTests.release.xcconfig"; sourceTree = "<group>"; };
+		A38806DD8F0DD0462E1F8E9C /* Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests.release.xcconfig"; path = "Target Support Files/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC33EC977149F56E3934E4F1 /* Pods_KotlinSwiftVideoCallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KotlinSwiftVideoCallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5DFC9E9E2538B39FE695269 /* Pods-KotlinSwiftVideoCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotlinSwiftVideoCall.debug.xcconfig"; path = "Target Support Files/Pods-KotlinSwiftVideoCall/Pods-KotlinSwiftVideoCall.debug.xcconfig"; sourceTree = "<group>"; };
+		EB9141AFC676379647D01316 /* Pods-KotlinSwiftVideoCallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotlinSwiftVideoCallTests.debug.xcconfig"; path = "Target Support Files/Pods-KotlinSwiftVideoCallTests/Pods-KotlinSwiftVideoCallTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DADD245252E6BEEE9B08076D /* Pods_KotlinSwiftVideoCall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40CD5EB4912C62D4E1EED766 /* Pods_KotlinSwiftVideoCallTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				921C16A6F9FE8E718844C037 /* Pods_KotlinSwiftVideoCall_KotlinSwiftVideoCallUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +97,8 @@
 				27146FBD2D10123E0076ECE3 /* KotlinSwiftVideoCallTests */,
 				27146FC72D10123E0076ECE3 /* KotlinSwiftVideoCallUITests */,
 				27146FAB2D10123C0076ECE3 /* Products */,
+				828DCDC08F47C94B931DB44B /* Pods */,
+				4E5C7C9548DA8A4EB659F47E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +112,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		4E5C7C9548DA8A4EB659F47E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AC6233459975CD3E5E0D69E /* Pods_KotlinSwiftVideoCall.framework */,
+				484DC4CB5582CF6F69150A5B /* Pods_KotlinSwiftVideoCall_KotlinSwiftVideoCallUITests.framework */,
+				CC33EC977149F56E3934E4F1 /* Pods_KotlinSwiftVideoCallTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		828DCDC08F47C94B931DB44B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5DFC9E9E2538B39FE695269 /* Pods-KotlinSwiftVideoCall.debug.xcconfig */,
+				28115D8B4984570633DDEE1C /* Pods-KotlinSwiftVideoCall.release.xcconfig */,
+				586252775AFE3A548B8DF3CA /* Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests.debug.xcconfig */,
+				A38806DD8F0DD0462E1F8E9C /* Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests.release.xcconfig */,
+				EB9141AFC676379647D01316 /* Pods-KotlinSwiftVideoCallTests.debug.xcconfig */,
+				756D41144EACA8DA830BBF14 /* Pods-KotlinSwiftVideoCallTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27146FCE2D10123E0076ECE3 /* Build configuration list for PBXNativeTarget "KotlinSwiftVideoCall" */;
 			buildPhases = (
+				8CCAA57F58CCD7215247C4A5 /* [CP] Check Pods Manifest.lock */,
 				27146FA62D10123C0076ECE3 /* Sources */,
 				27146FA72D10123C0076ECE3 /* Frameworks */,
 				27146FA82D10123C0076ECE3 /* Resources */,
+				14A3DEA8A9D7DE86A86CC72C /* [CP] Embed Pods Frameworks */,
+				AAFAF742A171113608B99625 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -111,8 +157,6 @@
 				27146FAC2D10123C0076ECE3 /* KotlinSwiftVideoCall */,
 			);
 			name = KotlinSwiftVideoCall;
-			packageProductDependencies = (
-			);
 			productName = KotlinSwiftVideoCall;
 			productReference = 27146FAA2D10123C0076ECE3 /* KotlinSwiftVideoCall.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +165,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27146FD12D10123E0076ECE3 /* Build configuration list for PBXNativeTarget "KotlinSwiftVideoCallTests" */;
 			buildPhases = (
+				C207B9F73CE0E63FF721A717 /* [CP] Check Pods Manifest.lock */,
 				27146FB62D10123E0076ECE3 /* Sources */,
 				27146FB72D10123E0076ECE3 /* Frameworks */,
 				27146FB82D10123E0076ECE3 /* Resources */,
@@ -134,8 +179,6 @@
 				27146FBD2D10123E0076ECE3 /* KotlinSwiftVideoCallTests */,
 			);
 			name = KotlinSwiftVideoCallTests;
-			packageProductDependencies = (
-			);
 			productName = KotlinSwiftVideoCallTests;
 			productReference = 27146FBA2D10123E0076ECE3 /* KotlinSwiftVideoCallTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -144,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27146FD42D10123E0076ECE3 /* Build configuration list for PBXNativeTarget "KotlinSwiftVideoCallUITests" */;
 			buildPhases = (
+				7497E1A903EC0D0771C7B2EF /* [CP] Check Pods Manifest.lock */,
 				27146FC02D10123E0076ECE3 /* Sources */,
 				27146FC12D10123E0076ECE3 /* Frameworks */,
 				27146FC22D10123E0076ECE3 /* Resources */,
+				98D3001A6D7DBC264C091566 /* [CP] Embed Pods Frameworks */,
+				3920E0AE74F9421FD3643905 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,8 +203,6 @@
 				27146FC72D10123E0076ECE3 /* KotlinSwiftVideoCallUITests */,
 			);
 			name = KotlinSwiftVideoCallUITests;
-			packageProductDependencies = (
-			);
 			productName = KotlinSwiftVideoCallUITests;
 			productReference = 27146FC42D10123E0076ECE3 /* KotlinSwiftVideoCallUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -230,6 +274,143 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14A3DEA8A9D7DE86A86CC72C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KotlinSwiftVideoCall/Pods-KotlinSwiftVideoCall-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KotlinSwiftVideoCall/Pods-KotlinSwiftVideoCall-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KotlinSwiftVideoCall/Pods-KotlinSwiftVideoCall-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3920E0AE74F9421FD3643905 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7497E1A903EC0D0771C7B2EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CCAA57F58CCD7215247C4A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KotlinSwiftVideoCall-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98D3001A6D7DBC264C091566 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests/Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAFAF742A171113608B99625 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KotlinSwiftVideoCall/Pods-KotlinSwiftVideoCall-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KotlinSwiftVideoCall/Pods-KotlinSwiftVideoCall-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KotlinSwiftVideoCall/Pods-KotlinSwiftVideoCall-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C207B9F73CE0E63FF721A717 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KotlinSwiftVideoCallTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27146FA62D10123C0076ECE3 /* Sources */ = {
@@ -390,6 +571,7 @@
 		};
 		27146FCF2D10123E0076ECE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5DFC9E9E2538B39FE695269 /* Pods-KotlinSwiftVideoCall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -398,7 +580,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"KotlinSwiftVideoCall/Preview Content\"";
 				DEVELOPMENT_TEAM = LBGM24R4NZ;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is required for video calls";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is required for video calls";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -419,6 +604,7 @@
 		};
 		27146FD02D10123E0076ECE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28115D8B4984570633DDEE1C /* Pods-KotlinSwiftVideoCall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -427,7 +613,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"KotlinSwiftVideoCall/Preview Content\"";
 				DEVELOPMENT_TEAM = LBGM24R4NZ;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is required for video calls";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is required for video calls";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,6 +637,7 @@
 		};
 		27146FD22D10123E0076ECE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB9141AFC676379647D01316 /* Pods-KotlinSwiftVideoCallTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -467,6 +657,7 @@
 		};
 		27146FD32D10123E0076ECE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 756D41144EACA8DA830BBF14 /* Pods-KotlinSwiftVideoCallTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +677,7 @@
 		};
 		27146FD52D10123E0076ECE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 586252775AFE3A548B8DF3CA /* Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -503,6 +695,7 @@
 		};
 		27146FD62D10123E0076ECE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A38806DD8F0DD0462E1F8E9C /* Pods-KotlinSwiftVideoCall-KotlinSwiftVideoCallUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

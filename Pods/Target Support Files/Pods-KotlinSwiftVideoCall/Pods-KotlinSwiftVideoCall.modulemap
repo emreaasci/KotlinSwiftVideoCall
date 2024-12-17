@@ -1,0 +1,6 @@
+framework module Pods_KotlinSwiftVideoCall {
+  umbrella header "Pods-KotlinSwiftVideoCall-umbrella.h"
+
+  export *
+  module * { export * }
+}
